@@ -15,12 +15,12 @@ export const HomeSection: React.FC = () => {
   return (
     <HomeSectionWrapper id="home">
       <HomeSectionContainer>
-        <h1>Multichain Aggregator for Metaverses and games</h1>
+        <h1>AI Infrastructure for Metaverses and Games</h1>
         <HomeBtnGroup>
           <HomeBtn onClick={() => router("/app/home")}>
             Explore marketplace
           </HomeBtn>
-          <HomeBtn>Get App</HomeBtn>
+          {/* <HomeBtn>Get App</HomeBtn> */}
         </HomeBtnGroup>
         <HomeSocialLinks>
           {socialLinks.map((item, key) => (

@@ -23,29 +23,29 @@ export const AppSignUpPage: React.FC = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    if (address) {
-      const data = {
-        email,
-        username,
-        wallets: [address],
-        password: pwd,
-      };
-      console.log(agreement);
+    //if (address) {
+    const data = {
+      email,
+      username,
+      wallets: [""],
+      password: pwd,
+    };
+    console.log(agreement);
 
-      createUser(data)
-        .then((data) => {
-          //@ts-ignore
-          if (!data.error && data) {
-            setGlobalState("isAuthenticated", true);
-            router("/app/subscription");
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    } else {
-      router("/app/wallet-connect");
-    }
+    createUser(data)
+      .then((data) => {
+        //@ts-ignore
+        if (!data.error && data) {
+          setGlobalState("isAuthenticated", true);
+          router("/dashboard/home");
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    // } else {
+    //   router("/app/wallet-connect");
+    // }
   };
 
   function handleChecked(e: React.ChangeEvent<HTMLInputElement>): void {
@@ -55,9 +55,7 @@ export const AppSignUpPage: React.FC = () => {
   return (
     <AppLayout
       buttonContent={
-        <AppButton onClick={() => router("/app/signup")}>
-          Create account
-        </AppButton>
+        <AppButton onClick={() => router("/app/signin")}>Sign In</AppButton>
       }
     >
       <div style={{ display: "none" }}>

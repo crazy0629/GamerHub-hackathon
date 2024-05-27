@@ -53,7 +53,6 @@ export const AppSubScriptionPage: React.FC = () => {
         currentUser.email || JSON.parse(localStorage.getItem("user")).email,
         //@ts-expect-error
         currentUser.username ||
-          //@ts-expect-error
           JSON.parse(localStorage.getItem("user")).username
       );
     }
@@ -108,12 +107,12 @@ export const AppSubScriptionPage: React.FC = () => {
               </CardHeader>
               <GamerPlanWrapper>
                 {item.plan.map((pItem, pKey) => (
-                  <p key={pKey}>
+                  <div key={pKey}>
                     <div>
                       <IconCheck />
                     </div>
                     {pItem}
-                  </p>
+                  </div>
                 ))}
               </GamerPlanWrapper>
               <Button

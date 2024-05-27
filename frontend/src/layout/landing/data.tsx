@@ -4,6 +4,8 @@ import {
   IconTelegram,
   IconTwitter,
 } from "../../components";
+import { FaLinkedin } from "react-icons/fa6";
+
 
 export const navLinkData = [
   {
@@ -18,31 +20,35 @@ export const navLinkData = [
     label: "Tokenomics",
     to: "#tokenomics",
   },
-  {
-    label: "Roadmap",
-    to: "#roadmap",
-  },
+  // {
+  //   label: "Roadmap",
+  //   to: "#roadmap",
+  // },
   {
     label: "Whitepaper",
-    to: "#whitepaper",
+    to: "https://gamerhub-2.gitbook.io/gamerhub-whitepaper-v1/",
   },
 ];
 
 export const socialLinks = [
   {
     icon: <IconTelegram />,
-    link: "https://telegram.org",
+    link: "https://t.me/GamerHub_Ann",
   },
   {
     icon: <IconDiscord />,
-    link: "https://discord.com",
+    link: "https://discord.gg/WPrVFFXgjX",
   },
   {
     icon: <IconTwitter />,
-    link: "https://twitter.com",
+    link: "https://twitter.com/gamer_hub_io",
   },
   {
     icon: <IconMedium />,
-    link: "https://medium.com",
+    link: "https://medium.com/@gamerhub_io",
+  },
+  {
+    icon: <FaLinkedin size={20} />,
+    link: "https://www.linkedin.com/company/gamerhub/",
   },
 ];
